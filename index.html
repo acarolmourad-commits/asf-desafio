@@ -1,36 +1,84 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ASF Desafio 30 — Evolução no Surf</title>
-<meta name="description" content="Desafio de 30 dias de evolução no surf: grade de progresso diária salva no navegador. Satélite do app ASF.">
-<style>:root{--p:#00a8cc;--pd:#0e2439;--g:#f4d03f}*{box-sizing:border-box;margin:0}body{font-family:system-ui,sans-serif;background:#f6fbfd;color:var(--pd)}nav{background:var(--pd);padding:9px 12px;display:flex;flex-wrap:wrap;gap:6px}nav a{color:#fff;text-decoration:none;font-size:11px;font-weight:600;padding:4px 8px;border-radius:20px;background:rgba(255,255,255,.08)}nav a.hub{background:var(--g);color:var(--pd)}header{padding:36px 20px;text-align:center;background:linear-gradient(135deg,#f4d03f25,#00a8cc15)}h1{font-size:26px}main{max-width:640px;margin:20px auto;padding:0 16px}.card{background:#fff;border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 2px 10px rgba(0,0,0,.06)}.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.day{aspect-ratio:1;border-radius:10px;background:#eef4f6;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;cursor:pointer;color:#678;transition:transform .15s}.day:hover{transform:scale(1.08)}.day.done{background:linear-gradient(135deg,var(--p),#9b59b6);color:#fff}.bar{height:12px;background:#eef4f6;border-radius:99px;overflow:hidden}.bar div{height:100%;background:linear-gradient(90deg,var(--g),var(--p));transition:width .4s}.muted{color:#678;font-size:13px}footer{text-align:center;padding:26px;font-size:12px;color:#678}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASF Desafio 30 — 30 dias de evolução no surf</title>
+<meta name="description" content="Tracker do Desafio 30 ASF: 30 dias de micro-missões de surf, com grade de progresso, streak e XP integrado ao Ranking. Satélite do app ASF.">
+<style>
+:root{--rosa:#ff4d8d;--roxo:#7b2ff7;--areia:#fff5ec;--mar:#00c2cb}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',system-ui,sans-serif}
+body{background:linear-gradient(160deg,#fff5ec,#ffe3f1 60%,#e0f7fa);min-height:100vh;color:#333}
+header{background:linear-gradient(90deg,var(--rosa),var(--roxo));color:#fff;padding:2rem 1rem;text-align:center}
+header h1{font-size:2rem}header p{opacity:.9;margin-top:.4rem}
+nav{display:flex;flex-wrap:wrap;gap:.4rem;justify-content:center;padding:.8rem;background:#fff;box-shadow:0 2px 8px #0001;position:sticky;top:0;z-index:10}
+nav a{background:var(--areia);border:1px solid #ffd3e6;color:#c2185b;padding:.3rem .7rem;border-radius:20px;font-size:.78rem;text-decoration:none}
+nav a:hover{background:var(--rosa);color:#fff}
+main{max-width:760px;margin:1.5rem auto;padding:0 1rem}
+.card{background:#fff;border-radius:16px;padding:1.4rem;box-shadow:0 4px 16px #7b2ff720;margin-bottom:1.2rem}
+.card h2{color:var(--roxo);margin-bottom:.6rem;font-size:1.2rem}
+.stats{display:flex;gap:1rem;justify-content:center;text-align:center;flex-wrap:wrap}
+.stats div{background:var(--areia);border-radius:12px;padding:.7rem 1.1rem}
+.stats strong{display:block;font-size:1.5rem;color:var(--rosa)}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(60px,1fr));gap:.5rem;margin-top:1rem}
+.dia{aspect-ratio:1;border-radius:12px;border:2px solid #ffd3e6;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;font-weight:bold;color:#c2185b;font-size:.9rem;transition:transform .1s}
+.dia:hover{transform:scale(1.06)}
+.dia small{font-weight:400;font-size:.6rem;color:#999;margin-top:2px}
+.dia.feito{background:linear-gradient(135deg,var(--rosa),var(--roxo));color:#fff;border:none}
+.dia.feito small{color:#ffe}
+.dia.hoje{border-color:var(--mar);box-shadow:0 0 0 3px #00c2cb33}
+button{background:linear-gradient(90deg,var(--rosa),var(--roxo));color:#fff;border:none;padding:.6rem 1.2rem;border-radius:24px;font-size:1rem;cursor:pointer}
+.xp{position:fixed;bottom:1rem;right:1rem;background:#fff;border:2px solid var(--rosa);border-radius:24px;padding:.4rem 1rem;font-weight:bold;color:var(--roxo);box-shadow:0 4px 12px #0002}
+footer{text-align:center;padding:2rem;font-size:.8rem;color:#888}
+footer a{color:var(--rosa)}
+</style>
 </head>
 <body>
+<header><h1>🔥 ASF Desafio 30</h1><p>30 dias de micro-missões para transformar seu surf</p></header>
 <nav>
-<a class="hub" href="https://acarolmourad-commits.github.io/asf-app/">🏄‍♀️ ASF App</a>
-<a href="https://acarolmourad-commits.github.io/asf-popup/">⏱️</a><a href="https://acarolmourad-commits.github.io/asf-treino/">💪</a><a href="https://acarolmourad-commits.github.io/asf-respira/">🫁</a><a href="https://acarolmourad-commits.github.io/asf-volume/">📐</a><a href="https://acarolmourad-commits.github.io/asf-mare/">🌙</a><a href="https://acarolmourad-commits.github.io/asf-previsao/">🌊</a><a href="https://acarolmourad-commits.github.io/asf-praias/">🏖️</a><a href="https://acarolmourad-commits.github.io/asf-eventos/">📅</a><a href="https://acarolmourad-commits.github.io/asf-glossario/">📖</a><a href="https://acarolmourad-commits.github.io/asf-comunidade/">💜</a><a href="https://acarolmourad-commits.github.io/asf-seguranca/">🛟</a><a href="https://acarolmourad-commits.github.io/asf-bemestar/">🧘</a><a href="https://acarolmourad-commits.github.io/asf-quiz/">🧠</a><a href="https://acarolmourad-commits.github.io/asf-equipamento/">🏄</a><a href="https://acarolmourad-commits.github.io/asf-nutricao/">🥑</a><a href="https://acarolmourad-commits.github.io/asf-viagens/">✈️</a><a href="https://acarolmourad-commits.github.io/asf-historia/">📜</a><a href="https://acarolmourad-commits.github.io/asf-diario/">📓</a>
+<a href="https://acarolmourad-commits.github.io/asf-app/">🏄‍♀️ ASF App</a>
+<a href="https://acarolmourad-commits.github.io/asf-treino/">Treino</a>
+<a href="https://acarolmourad-commits.github.io/asf-yoga/">Yoga</a>
+<a href="https://acarolmourad-commits.github.io/asf-popup/">Pop-up</a>
+<a href="https://acarolmourad-commits.github.io/asf-respira/">Respira</a>
+<a href="https://acarolmourad-commits.github.io/asf-diario/">Diário</a>
+<a href="https://acarolmourad-commits.github.io/asf-ranking/">Ranking</a>
+<a href="https://acarolmourad-commits.github.io/asf-quiz/">Quiz</a>
+<a href="https://acarolmourad-commits.github.io/asf-praias/">Praias</a>
+<a href="https://acarolmourad-commits.github.io/asf-previsao/">Previsão</a>
+<a href="https://acarolmourad-commits.github.io/asf-comunidade/">Comunidade</a>
+<a href="https://acarolmourad-commits.github.io/asf-rede/"></a>
 </nav>
-<header><h1>🗓️ ASF Desafio 30</h1><p>30 dias de micro-missões para evoluir no surf — toque no dia para concluir</p></header>
 <main>
-<div class="card">
-<p class="muted"><b id="pct">0%</b> concluído • <span id="streak">0</span> dias seguidos 🔥</p>
-<div class="bar" style="margin:8px 0 14px"><div id="bar" style="width:0%"></div></div>
-<div class="grid" id="grid"></div>
+<div class="card"><h2>Seu progresso 💪</h2><div class="stats">
+<div><strong id="feitos">0</strong>dias</div><div><strong id="streak">0</strong>🔥 streak</div><div><strong id="pct">0%</strong>do desafio</div>
 </div>
-<div class="card"><p class="muted">💡 Missões: dia 1 — respiração 4-4-4 no <a href="https://acarolmourad-commits.github.io/asf-respira/">Respira</a> • dia 5 — treino de pop-up no <a href="https://acarolmourad-commits.github.io/asf-popup/">Pop-up Trainer</a> • dia 10 — sessão registrada no <a href="https://acarolmourad-commits.github.io/asf-diario/">Diário</a> • dia 20 — quiz completo no <a href="https://acarolmourad-commits.github.io/asf-quiz/">Quiz</a> • dia 30 — celebre com as manas da <a href="https://acarolmourad-commits.github.io/asf-comunidade/">Comunidade</a>!</p></div>
+<p style="margin-top:.8rem;font-size:.85rem;color:#777">Cada dia concluído vale <b>+10 XP</b> no <a href="https://acarolmourad-commits.github.io/asf-ranking/">ASF Ranking</a> (seus pontos são compartilhados entre todos os apps ASF!).</p></div>
+<div class="card"><h2>Os 30 dias 🗓️</h2><div class="grade" id="grade"></div></div>
+<div class="card"><h2>Como funciona 🌊</h2><p>Toque no dia ao completar a missão. Missões combinam os apps da rede: yoga com o <a href="https://acarolmourad-commits.github.io/asf-yoga/">ASF Yoga</a>, pop-ups com o <a href="https://acarolmourad-commits.github.io/asf-popup/">ASF Pop-up</a>, registro no <a href="https://acarolmourad-commits.github.io/asf-diario/">Diário</a>. Constância &gt; intensidade!</p></div>
 </main>
-<footer>Parte da constelação ASF • <a href="https://acarolmourad-commits.github.io/asf-app/">Voltar ao app principal</a></footer>
+<div class="xp">⭐ XP: <span id="xp">0</span></div>
+<footer>ASF — Associação de Surf Feminino · Feito com 🌊 e 💜 · <a href="https://acarolmourad-commits.github.io/asf-app/">asf-app</a></footer>
 <script>
-const K='asf-desafio30';let done=JSON.parse(localStorage.getItem(K)||'[]');
-const grid=document.getElementById('grid');
+const MISSOES=['1h de surf ou natação','10 min yoga pré-surf','20 pop-ups no chão','Respiração 4-4-4 ×5','Assistir 1 guia ASF','Registrar sessão no Diário','Alongamento 10 min','Quiz do dia','Remada 15 min (piscina/mar)','Visualização: 5 min de surf mental','1h de surf ou natação','20 pop-ups no chão','Yoga pós-surf','Apneia sentada ×3','Leitura de mar: 10 min na praia','Registrar sessão no Diário','Quiz do dia','Força: agachamento 3×15','Alongamento 10 min','1h de surf ou natação','Respiração 4-4-4 ×5','20 pop-ups no chão','Chamar uma mana para surfar','Quiz do dia','Yoga pré-surf','Remada 15 min','Registrar sessão no Diário','Limpeza de praia (ASF Eco)','Revisar sua evolução','1h de surf celebrando! 🎉'];
+const KEY='asfdesafio';let feito=JSON.parse(localStorage.getItem(KEY)||'[]');
+const XP=()=>parseInt(localStorage.getItem('asf_xp')||'0');
+function addXP(n){localStorage.setItem('asf_xp',XP()+n);document.getElementById('xp').textContent=XP();}
+document.getElementById('xp').textContent=XP();
+const g=document.getElementById('grade');
 function render(){
- grid.innerHTML='';
- for(let i=1;i<=30;i++){const d=document.createElement('div');d.className='day'+(done.includes(i)?' done':'');d.textContent=done.includes(i)?'✓':i;d.onclick=()=>{done=done.includes(i)?done.filter(x=>x!==i):[...done,i];localStorage.setItem(K,JSON.stringify(done));render()};grid.appendChild(d)}
- const p=Math.round(done.length/30*100);document.getElementById('pct').textContent=p+'%';document.getElementById('bar').style.width=p+'%';
- let s=0;for(let i=1;i<=30;i++){if(done.includes(i))s++;else break}document.getElementById('streak').textContent=s;
- if(done.length===30)document.getElementById('pct').textContent='100% — DESAFIO COMPLETO! 🏆';
+ g.innerHTML='';
+ MISSOES.forEach((m,i)=>{const d=document.createElement('div');d.className='dia'+(feito.includes(i)?' feito':'');
+ d.innerHTML=i+1;d.title=m;d.onclick=()=>toggle(i);g.appendChild(d);});
+ const n=feito.length;
+ document.getElementById('feitos').textContent=n;
+ document.getElementById('pct').textContent=Math.round(n/30*100)+'%';
+ let s=0;for(let i=0;i<30;i++){if(feito.includes(i))s++;else break;}
+ document.getElementById('streak').textContent=s;
 }
+function toggle(i){const ix=feito.indexOf(i);
+ if(ix>=0){feito.splice(ix,1);addXP(-10);}else{feito.push(i);addXP(10);}
+ localStorage.setItem(KEY,JSON.stringify(feito));render();}
 render();
 </script>
 </body>
