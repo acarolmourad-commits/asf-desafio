@@ -1,1 +1,119 @@
-<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ASF Desafio 30 — 30 dias de evolução no surf | ASF</title><meta name="description" content="Desafio de 30 dias de evolução no surf: grade de progresso diária com hábitos de treino, mar e estudo. Satélite do app ASF."><link rel="canonical" href="https://acarolmourad-commits.github.io/asf-desafio/"><meta name="theme-color" content="#00A8CC"><style>:root{--p:#00A8CC;--d:#0E2439;--u:#9B59B6;--bg:#F7FBFC;--g:#5A6B7A}*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--d)}nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #E5EEF2;padding:10px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}nav a{color:var(--p);text-decoration:none;font-weight:700;font-size:13px}nav a.on{color:var(--u)}header{background:linear-gradient(135deg,var(--p),var(--u));color:#fff;padding:40px 20px 30px;text-align:center}.wrap{max-width:640px;margin:0 auto;padding:24px 16px 60px}.grade{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:14px 0}.dia{aspect-ratio:1;background:#fff;border:2px solid #E5EEF2;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;cursor:pointer}.dia.on{background:linear-gradient(135deg,var(--p),var(--u));color:#fff;border-color:transparent}.card{background:#fff;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 2px 8px rgba(14,36,57,.06)}.bar{background:#E5EEF2;border-radius:99px;height:12px;overflow:hidden}.bar div{background:linear-gradient(90deg,var(--p),var(--u));height:100%;transition:width .3s}.muted{color:var(--g);font-size:12.5px}footer{text-align:center;font-size:12.5px;color:var(--g);padding:24px;border-top:1px solid #E5EEF2}</style></head><body><nav><a href="https://acarolmourad-commits.github.io/asf-app/">🏄 App</a><a class="on" href="https://acarolmourad-commits.github.io/asf-desafio/">📈 Desafio 30</a><a href="https://acarolmourad-commits.github.io/asf-desafios/">🎯 Desafios</a><a href="https://acarolmourad-commits.github.io/asf-treino/">🏋️ Treino</a><a href="https://acarolmourad-commits.github.io/asf-sonhos/">🌠 Sonhos</a></nav><header><h1>📈 Desafio 30 dias</h1><p>Um dia de evolução por vez: marque cada dia cumprido.</p></header><main class="wrap"><div class="card"><div class="muted"><span id="n">0</span>/30 dias · <span id="pct">0</span>%</div><div class="bar" style="margin-top:8px"><div id="bar" style="width:0%"></div></div><div class="grade" id="grade"></div><div class="muted">Toque no dia para marcar/desmarcar. Ideias de treino no <a href="https://acarolmourad-commits.github.io/asf-treino/">ASF Treino</a>.</div></div></main><footer>🌊 ASF · <a href="https://acarolmourad-commits.github.io/" style="color:var(--p)">Hub de apps</a></footer><script>const K='asf-desafio30-v1';let st=JSON.parse(localStorage.getItem(K)||'{}');const g=document.getElementById('grade');for(let i=1;i<=30;i++){const d=document.createElement('div');d.className='dia'+(st[i]?' on':'');d.textContent=i;d.onclick=()=>{st[i]=!st[i];d.classList.toggle('on');localStorage.setItem(K,JSON.stringify(st));att();};g.appendChild(d);}function att(){let n=0;for(let i=1;i<=30;i++)st[i]&&n++;document.getElementById('n').textContent=n;const p=Math.round(n/30*100);document.getElementById('pct').textContent=p;document.getElementById('bar').style.width=p+'%';}att();</script></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASF Desafio 30 — 30 dias de evolução no surf feminino | ASF</title>
+<meta name="description" content="Desafio de 30 dias de evolução no surf: grade de progresso diária com hábitos de treino, mar e estudo. Acompanhe sua jornada com a ASF — Associação Surf Feminino.">
+<meta name="keywords" content="desafio surf, surf feminino, 30 dias surf, evolução surf, ASF, treino surf, mulheres no surf">
+<meta name="author" content="ASF — Associação Surf Feminino">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://acarolmourad-commits.github.io/asf-desafio/">
+<meta name="theme-color" content="#00A8CC">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ASF Desafio 30">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ASF — Associação Surf Feminino">
+<meta property="og:title" content="ASF Desafio 30 — 30 dias de evolução no surf">
+<meta property="og:description" content="Um dia de evolução por vez. Marque cada dia cumprido e acompanhe seu progresso no desafio de 30 dias de surf feminino.">
+<meta property="og:url" content="https://acarolmourad-commits.github.io/asf-desafio/">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ASF Desafio 30 — 30 dias de evolução no surf">
+<meta name="twitter:description" content="Um dia de evolução por vez: grade de progresso diária para surfistas. Desafio ASF.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Dados estruturados (Schema.org) -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"ASF Desafio 30","url":"https://acarolmourad-commits.github.io/asf-desafio/","applicationCategory":"HealthApplication","operatingSystem":"Web","inLanguage":"pt-BR","description":"Desafio de 30 dias de evolução no surf com grade de progresso diária.","offers":{"@type":"Offer","price":"0","priceCurrency":"BRL"},"author":{"@type":"Organization","name":"ASF — Associação Surf Feminino","url":"https://acarolmourad-commits.github.io/asf-app/"},"isPartOf":{"@type":"WebSite","name":"ASF — Associação Surf Feminino","url":"https://acarolmourad-commits.github.io/asf-app/"}}
+</script>
+
+<style>
+:root{--p:#00A8CC;--d:#0E2439;--u:#9B59B6;--bg:#F7FBFC;--g:#5A6B7A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Outfit',system-ui,sans-serif;background:var(--bg);color:var(--d);line-height:1.5}
+nav{position:sticky;top:0;background:#fff;border-bottom:1px solid #E5EEF2;padding:10px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+nav a{color:var(--p);text-decoration:none;font-weight:700;font-size:13px;padding:6px 10px;border-radius:8px}
+nav a:hover{background:#E8F6FA}
+nav a.on{color:var(--u)}
+nav a:focus-visible,button:focus-visible,.dia:focus-visible{outline:3px solid var(--u);outline-offset:2px}
+header{background:linear-gradient(135deg,var(--p),var(--u));color:#fff;padding:40px 20px 30px;text-align:center}
+header h1{font-size:clamp(24px,5vw,34px)}
+header p{opacity:.95;margin-top:6px}
+.wrap{max-width:640px;margin:0 auto;padding:24px 16px 60px}
+.grade{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin:14px 0;list-style:none}
+.dia{aspect-ratio:1;background:#fff;border:2px solid #E5EEF2;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.dia:hover{transform:scale(1.06);box-shadow:0 2px 8px rgba(14,36,57,.15)}
+.dia.on{background:linear-gradient(135deg,var(--p),var(--u));color:#fff;border-color:transparent}
+.card{background:#fff;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 2px 8px rgba(14,36,57,.06)}
+.bar{background:#E5EEF2;border-radius:99px;height:12px;overflow:hidden}
+.bar div{background:linear-gradient(90deg,var(--p),var(--u));height:100%;transition:width .3s}
+.muted{color:var(--g);font-size:12.5px}
+footer{text-align:center;font-size:12.5px;color:var(--g);padding:24px;border-top:1px solid #E5EEF2}
+</style>
+</head>
+<body>
+<nav aria-label="Navegação principal">
+<a href="https://acarolmourad-commits.github.io/asf-app/">🏄 App</a>
+<a class="on" href="https://acarolmourad-commits.github.io/asf-desafio/" aria-current="page">📈 Desafio 30</a>
+<a href="https://acarolmourad-commits.github.io/asf-desafios/">🏆 Desafios</a>
+<a href="https://acarolmourad-commits.github.io/asf-treino/">💪 Treino</a>
+<a href="https://acarolmourad-commits.github.io/asf-sonhos/">🌠 Sonhos</a>
+</nav>
+
+<header>
+<h1>📈 Desafio 30 dias</h1>
+<p>Um dia de evolução por vez: marque cada dia cumprido.</p>
+</header>
+
+<main class="wrap">
+<section class="card" aria-labelledby="progresso-titulo">
+<h2 id="progresso-titulo" style="position:absolute;left:-9999px">Seu progresso no desafio</h2>
+<div class="muted" role="status" aria-live="polite"><span id="n">0</span>/30 dias · <span id="pct">0</span>%</div>
+<div class="bar" style="margin-top:8px" role="progressbar" aria-label="Progresso do desafio" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="barwrap"><div id="bar" style="width:0%"></div></div>
+<ul class="grade" id="grade"></ul>
+<p class="muted">Toque no dia para marcar/desmarcar (também funciona com Tab + Enter). Ideias de treino no <a href="https://acarolmourad-commits.github.io/asf-treino/">ASF Treino</a>.</p>
+</section>
+
+<section class="card" aria-labelledby="como-titulo">
+<h2 id="como-titulo" style="font-size:16px;margin-bottom:8px">Como funciona o desafio</h2>
+<p style="font-size:14px">Escolha um hábito de evolução por dia — surfar, treinar paddling, estudar técnica ou cuidar do corpo — e marque aqui. Seu progresso fica salvo no navegador. Em 30 dias, a constância vira resultado. Compartilhe sua jornada no Instagram <a href="https://instagram.com/asf.surffeminino" target="_blank" rel="noopener">@asf.surffeminino</a>!</p>
+</section>
+</main>
+
+<footer>🌊 ASF · <a href="https://acarolmourad-commits.github.io/" style="color:var(--p)">Hub de apps</a></footer>
+
+<script>
+const K='asf-desafio30-v1';let st=JSON.parse(localStorage.getItem(K)||'{}');
+const g=document.getElementById('grade');
+for(let i=1;i<=30;i++){
+  const li=document.createElement('li');
+  const d=document.createElement('button');
+  d.type='button';d.className='dia'+(st[i]?' on':'');d.textContent=i;
+  d.setAttribute('aria-label','Dia '+i+(st[i]?' (cumprido)':' (não cumprido)'));
+  d.setAttribute('aria-pressed',st[i]?'true':'false');
+  d.onclick=()=>{st[i]=!st[i];d.classList.toggle('on');
+    d.setAttribute('aria-pressed',st[i]?'true':'false');
+    d.setAttribute('aria-label','Dia '+i+(st[i]?' (cumprido)':' (não cumprido)'));
+    localStorage.setItem(K,JSON.stringify(st));att();};
+  li.appendChild(d);g.appendChild(li);
+}
+function att(){let n=0;for(let i=1;i<=30;i++)st[i]&&n++;
+  document.getElementById('n').textContent=n;
+  const p=Math.round(n/30*100);
+  document.getElementById('pct').textContent=p;
+  document.getElementById('bar').style.width=p+'%';
+  document.getElementById('barwrap').setAttribute('aria-valuenow',p);
+}
+att();
+</script>
+</body>
+</html>
